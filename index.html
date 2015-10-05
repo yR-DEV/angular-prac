@@ -85,7 +85,7 @@
       </div>
 
       <div ng-show="kittens">
-        <div ng-repeat="kitten in kittens">
+        <div ng-repeat="kitten in kittens | reverse">
           <div class="container">
             <img ng-src="{{kitten.image}}" class="kitten-img">
             <h3>{{kitten.name}}</h3>
@@ -105,6 +105,7 @@
     <script src="js/ngApp.js"></script>
     <script src="js/ngController.js"></script>
     <script src="js/ngServices.js"></script>
+    <script src="js/ngFilter.js"></script>
 
   </body>
 </html>

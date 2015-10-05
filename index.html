@@ -5,14 +5,14 @@
     <title>prac</title>
 
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   </head>
-  <body>
-    <div ng-controller="NavbarController">
+  <body ng-controller="BodyController">
+    <div>
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -84,11 +84,27 @@
         </div>
       </div>
 
+      <div ng-show="kittens">
+        <div ng-repeat="kitten in kittens">
+          <div class="container">
+            <img ng-src="{{kitten.image}}" class="kitten-img">
+            <h3>{{kitten.name}}</h3>
+            <p>
+              ____________________________
+            </p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
 
     <script src="js/ngApp.js"></script>
     <script src="js/ngController.js"></script>
+    <script src="js/ngServices.js"></script>
 
   </body>
 </html>
